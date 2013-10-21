@@ -1,21 +1,19 @@
 #include "character.h"
 #include "sdlutil.h"
+#include <iostream>
 
-Character::Character ()
+Character::Character (string character_string, int initial_position_x, int initial_position_y, int width, int height)
 {
-	this->x_position = 397;
-	this->y_position = 360;
-	this->width = 61;
-	this->height = 96;
-	this->jumping = false;
-	this->moving_right = false;
-	this->moving_left = false;
-	this->jumping_speed = 0;
-	this->side = true;
-	this->movement = 0;
-	this->defending = false;
 
-	character_surface = load_image ("assets/idle1.png", true);
+	itself.upper_left.x = initial_position_x;
+	itself.upper_left.y = initial_position_y;
+	itself.width = width;
+	itself.height = height;
+
+	movement.x = 0;
+	movement.y = 0;
+
+	character_surface = load_image (character_string);
 }
 
 void

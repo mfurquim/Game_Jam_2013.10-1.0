@@ -4,30 +4,26 @@
 #include <SDL/SDL.h>
 #include "gameobject.h"
 #include <string>
+#include "level.h"
+#include "primitives.h"
 
 using namespace std;
 
 class Character : public Gameobject
 {
 private:
-	int width, height;
+	Box itself;
 	void draw_self (SDL_Surface* surface);
-
+	Vector2d movement;
 
 public:
-
-	SDL_Surface* character_surface;
-
-	const bool RIGHT = true;
-	const bool LEFT = false;
-	bool side; // true = right; false = left
-
-	int movement;
-	int x_position, y_position;
-	float jumping_speed;
-	bool jumping, moving_right, moving_left, jumped, defending;
-	Character();
+	Character (string character_string, int initial_position_x, int initial_position_y, int width = 30, int height = 60);
+	Character (string character_string, Box itself);
 	~Character();
+
+	void move_left (bool enable);
+	void move_right (bool enable);
+	void jump (bool enable);
 
 };
 

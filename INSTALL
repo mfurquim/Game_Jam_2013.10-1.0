@@ -1,6 +1,6 @@
-Candle light was developed for Linux.
+ was developed for Linux.
 
-In order to compile it, one must have the SDL and SDL_image libraries. Autotools are also required to generate the makefiles.
+In order to compile it, one must have the SDL, SDL_Mixer and SDL_Images libraries. Autotools are also required to generate the makefiles.
 
 To compile, run:
 
@@ -8,4 +8,4 @@ bootstrap.sh
 ./configure
 make
 
-then run source/candle_light
+then run source/

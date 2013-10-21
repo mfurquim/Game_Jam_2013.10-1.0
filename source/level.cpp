@@ -4,8 +4,8 @@
 Level::Level (string scenario_string)
 {
 	this->scenario_surface = load_image (scenario_string);
-	this->scenario_string = scenario_string;
 	this->x_scenario = 0;
+	this->y_scenario = 0;
 }
 
 Level::~Level()
@@ -16,5 +16,5 @@ Level::~Level()
 void
 Level::draw_self (SDL_Surface* surface)
 {
-	apply_surface (x_scenario, 0, scenario_surface, surface);
+	apply_surface (x_scenario, y_scenario, scenario_surface, surface);
 }

@@ -12,6 +12,9 @@ private:
 	SDL_Surface* scenario_surface;
 	string scenario_string;
 
+	static const int WIDTH = 854;
+	static const int HEIGHT = 480;
+
 	void draw_self (SDL_Surface* surface);
 
 public:

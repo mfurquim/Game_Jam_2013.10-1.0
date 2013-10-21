@@ -11,7 +11,6 @@ class Gameobject
 private:
 	vector<Gameobject*> children;
 	virtual void draw_self (SDL_Surface* surface) = 0;
-	bool check_colision (Gameobject* object);
 
 public:
 	virtual ~Gameobject();
